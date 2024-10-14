@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishCRM.API", "src\FishCRM.API\FishCRM.API.csproj", "{CE45DDC6-BAF9-47FF-8FF6-A4A373A666B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishCRM.Infrastructure", "src\FishCRM.Infrastructure\FishCRM.Infrastructure.csproj", "{99471F5A-0C54-4942-9326-D99B74DE6FCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishCRM.Application", "src\FishCRM.Application\FishCRM.Application.csproj", "{202B1D31-568C-4F12-9A89-FF8F394A0CD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIshCRM.Domain", "src\FIshCRM.Domain\FIshCRM.Domain.csproj", "{86F2BC9E-1110-4134-9C36-D5B4B70AEB1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE45DDC6-BAF9-47FF-8FF6-A4A373A666B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE45DDC6-BAF9-47FF-8FF6-A4A373A666B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE45DDC6-BAF9-47FF-8FF6-A4A373A666B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE45DDC6-BAF9-47FF-8FF6-A4A373A666B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99471F5A-0C54-4942-9326-D99B74DE6FCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99471F5A-0C54-4942-9326-D99B74DE6FCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99471F5A-0C54-4942-9326-D99B74DE6FCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99471F5A-0C54-4942-9326-D99B74DE6FCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{202B1D31-568C-4F12-9A89-FF8F394A0CD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{202B1D31-568C-4F12-9A89-FF8F394A0CD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{202B1D31-568C-4F12-9A89-FF8F394A0CD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{202B1D31-568C-4F12-9A89-FF8F394A0CD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86F2BC9E-1110-4134-9C36-D5B4B70AEB1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86F2BC9E-1110-4134-9C36-D5B4B70AEB1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86F2BC9E-1110-4134-9C36-D5B4B70AEB1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86F2BC9E-1110-4134-9C36-D5B4B70AEB1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A3C2332-0A26-490A-8CD5-4068A9EAEF4F}
+	EndGlobalSection
+EndGlobal
