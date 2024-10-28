@@ -6,38 +6,26 @@ namespace FishCRM.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class FishBaseController : Controller
+    public class FisherSession : Controller
     {
         private readonly IFishCRMService _fishCRMService;
 
-        public FishBaseController(IFishCRMService fishCRMService)
+        public FisherSession(IFishCRMService fishCRMService)
         {
             _fishCRMService = fishCRMService;
         }
-        
+
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var response = await _fishCRMService.GetAllFishBases();
+            var response = await _fishCRMService.GetAllSession();
             return Json(new { data = response.Data });
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateFishBaseModel model)
+        public async Task<IActionResult> Create(CreateFisherSessionModel model)
         {
-            var response = await _fishCRMService.CreateFishBase(model);
-
-            if (response.StatusCode == FIshCRM.Domain.Enum.StatusCode.Ok)
-            {
-                return Ok(new { description = response.Description });
-            }
-            return BadRequest(new { description = response.Description });
-        }
-
-        [HttpDelete]
-        public async Task<IActionResult> Delete(int id)
-        {
-            var response = await _fishCRMService.DeleteFishBaseById(id);
+            var response = await _fishCRMService.StartSession(model);
 
             if (response.StatusCode == FIshCRM.Domain.Enum.StatusCode.Ok)
             {
@@ -47,9 +35,9 @@ namespace FishCRM.API.Controllers
         }
 
         [HttpPatch]
-        public async Task<IActionResult> Patch(UpdateFishBaseModel model)
+        public async Task<IActionResult> Patch(UpdateFisherSessionModel model)
         {
-            var response = await _fishCRMService.PatchFishBase(model);
+            var response = await _fishCRMService.StopSession(model);
 
             if (response.StatusCode == FIshCRM.Domain.Enum.StatusCode.Ok)
             {

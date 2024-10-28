@@ -15,6 +15,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IBaseRepository<FishBase>, FishBaseRepository>();
 builder.Services.AddScoped<IBaseRepository<Fish>, FishRepository>();
+builder.Services.AddScoped<IBaseRepository<Fisher>, FisherRepository>();
+builder.Services.AddScoped<IBaseRepository<FisherSession>, FisherSessionRepository>();
 builder.Services.AddScoped<IFishCRMService, FishCRMService>();
 
 var connectionString = builder.Configuration.GetConnectionString("MSSQL");

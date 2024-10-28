@@ -6,26 +6,26 @@ namespace FishCRM.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class FishBaseController : Controller
+    public class FishController : Controller
     {
         private readonly IFishCRMService _fishCRMService;
 
-        public FishBaseController(IFishCRMService fishCRMService)
+        public FishController(IFishCRMService fishCRMService)
         {
             _fishCRMService = fishCRMService;
         }
-        
+
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll(int fishBaseId)
         {
-            var response = await _fishCRMService.GetAllFishBases();
+            var response = await _fishCRMService.GetAllFishInBase(fishBaseId);
             return Json(new { data = response.Data });
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateFishBaseModel model)
+        public async Task<IActionResult> Create([FromBody] CreateFishModel model)
         {
-            var response = await _fishCRMService.CreateFishBase(model);
+            var response = await _fishCRMService.CreateFish(model);
 
             if (response.StatusCode == FIshCRM.Domain.Enum.StatusCode.Ok)
             {
@@ -35,9 +35,9 @@ namespace FishCRM.API.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(int fishBaseId ,int fishId)
         {
-            var response = await _fishCRMService.DeleteFishBaseById(id);
+            var response = await _fishCRMService.DeleteFishById(fishBaseId, fishId);
 
             if (response.StatusCode == FIshCRM.Domain.Enum.StatusCode.Ok)
             {
@@ -47,9 +47,9 @@ namespace FishCRM.API.Controllers
         }
 
         [HttpPatch]
-        public async Task<IActionResult> Patch(UpdateFishBaseModel model)
+        public async Task<IActionResult> Patch(UpdateFishModel model)
         {
-            var response = await _fishCRMService.PatchFishBase(model);
+            var response = await _fishCRMService.PatchFishInBase(model);
 
             if (response.StatusCode == FIshCRM.Domain.Enum.StatusCode.Ok)
             {

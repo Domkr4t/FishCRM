@@ -13,8 +13,8 @@ namespace FishCRM.Infrastructure
 
         public DbSet<FishBase> FishBases { get; set; }
         public DbSet<Fish> Fishs { get; set; }
-
-
+        public DbSet<Fisher> Fishers { get; set; }
+        public DbSet<FisherSession> FisherSessions { get; set; }
     }
 }
 
